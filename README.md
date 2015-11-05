@@ -54,3 +54,4 @@ $ git push origin 1.0.0
 See following projects.
 
 * https://github.com/miya0001/simple-map
+* https://github.com/miya0001/oembed-gist
