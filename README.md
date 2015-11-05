@@ -19,7 +19,7 @@ matrix:
       env: WP_VERSION=latest WP_MULTISITE=0 WP_PULUGIN_DEPLOY=1
 ```
 
-Finally please add environments variables like following in global section.
+Finally, please add environments variables like following in global section.
 
 ```
 env:
