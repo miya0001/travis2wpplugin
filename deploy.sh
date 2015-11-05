@@ -12,7 +12,7 @@ if [[ ! $WP_PULUGIN_DEPLOY ]]; then
 	exit
 fi
 
-echo "Startng deploy..."
+echo "Starting deploy..."
 
 mkdir build
 
