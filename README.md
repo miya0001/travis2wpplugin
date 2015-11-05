@@ -29,7 +29,7 @@ env:
     - secure: "xxxxxxxx"
 ```
 
-You can get secure value like following.
+You can get `secure` value like following.
 
 ```
 travis encrypt SVN_USER=<your-account> SVN_PASS=<your-password>
