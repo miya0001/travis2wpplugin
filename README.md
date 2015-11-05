@@ -50,3 +50,7 @@ When you would push tag, then it will run commit,
 $ git tag 1.0.0
 $ git push origin 1.0.0
 ```
+
+See following projects.
+
+* https://github.com/miya0001/simple-map
