@@ -23,7 +23,7 @@ git clone -q $GH_REF $(basename $SVN_REPO)/git
 cd $(basename $SVN_REPO)
 SVN_ROOT_DIR=$(pwd)
 
-rsync -av --exclude=".svn" --delete $SVN_ROOT_DIR/git/ $SVN_ROOT_DIR/trunk/
+rsync -av --exclude=".svn" --checksum --delete $SVN_ROOT_DIR/git/ $SVN_ROOT_DIR/trunk/
 rm -fr $SVN_ROOT_DIR/git
 
 cd $SVN_ROOT_DIR/trunk
