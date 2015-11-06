@@ -29,7 +29,7 @@ rm -fr $SVN_ROOT_DIR/git
 cd $SVN_ROOT_DIR/trunk
 
 if [ -e "bin/build.sh" ]; then
-	echo "Startng bin/build.sh."
+	echo "Starting bin/build.sh."
 	bash bin/build.sh
 fi
 
