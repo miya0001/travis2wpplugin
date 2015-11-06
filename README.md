@@ -43,7 +43,7 @@ Example of .svnignore is following.
 
 https://github.com/miya0001/wp-svnignore
 
-Add your `.svnignore` like following projects.
+Add your `.svnignore` like following projects
 
 https://github.com/miya0001/simple-map
 
