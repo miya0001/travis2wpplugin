@@ -22,7 +22,7 @@ BASE_DIR=$(pwd)
 svn co -q $SVN_REPO
 git clone -q $GH_REF $(basename $SVN_REPO)/git
 
-$(basename $SVN_REPO)/git
+cd $(basename $SVN_REPO)/git
 
 if [ -e "bin/build.sh" ]; then
 	echo "Starting bin/build.sh."
