@@ -50,9 +50,13 @@ echo "Check statuses before commit."
 svn st
 
 if [[ $TRAVIS_TAG && $SVN_USER && $SVN_PASS ]]; then
-	echo "Commit to $SVN_REPO."
-	svn cp -q trunk tags/$TRAVIS_TAG
-	svn commit -m "commit version $TRAVIS_TAG" --username $SVN_USER --password $SVN_PASS --non-interactive 2>/dev/null
+	if [[ ! -d tags/$TRAVIS_TAG ]]; then
+		echo "Commit to $SVN_REPO."
+		svn cp -q trunk tags/$TRAVIS_TAG
+		svn commit -m "commit version $TRAVIS_TAG" --username $SVN_USER --password $SVN_PASS --non-interactive 2>/dev/null
+	else
+		echo "tags/$TRAVIS_TAG is already exists."
+	fi
 else
 	echo "Nothing to commit."
 fi
