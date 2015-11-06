@@ -39,6 +39,10 @@ http://docs.travis-ci.com/user/encryption-keys/
 
 ### `.svnignore`
 
+Example of .svnignore is following.
+
+https://github.com/miya0001/wp-svnignore
+
 Add your `.svnignore` like following projects.
 
 https://github.com/miya0001/simple-map
