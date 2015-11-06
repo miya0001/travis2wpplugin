@@ -17,21 +17,25 @@ echo "Starting deploy..."
 mkdir build
 
 cd build
+BASE_DIR=$(pwd)
+
 svn co -q $SVN_REPO
 git clone -q $GH_REF $(basename $SVN_REPO)/git
 
-cd $(basename $SVN_REPO)
+$(basename $SVN_REPO)/git
+
+if [ -e "bin/build.sh" ]; then
+	echo "Starting bin/build.sh."
+	bash bin/build.sh
+fi
+
+cd $BASE_DIR/$(basename $SVN_REPO)
 SVN_ROOT_DIR=$(pwd)
 
 rsync -av --exclude=".svn" --checksum --delete $SVN_ROOT_DIR/git/ $SVN_ROOT_DIR/trunk/
 rm -fr $SVN_ROOT_DIR/git
 
 cd $SVN_ROOT_DIR/trunk
-
-if [ -e "bin/build.sh" ]; then
-	echo "Starting bin/build.sh."
-	bash bin/build.sh
-fi
 
 if [ -e ".svnignore" ]; then
 	svn propset -q -R svn:ignore -F .svnignore .
