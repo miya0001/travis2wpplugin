@@ -37,6 +37,20 @@ travis encrypt SVN_USER=<your-account> SVN_PASS=<your-password>
 
 http://docs.travis-ci.com/user/encryption-keys/
 
+### `.svnignore`
+
+Add your `.svnignore` like following projects.
+
+https://github.com/miya0001/simple-map
+
+This script runs `svn propset -R` automatically  when there is a `.svnignore`.
+
+### Running a building
+
+Please place the `bin/build.sh`.
+
+`bin/build.sh` will be executed automatically.
+
 ## How to commit
 
 ```
@@ -55,3 +69,5 @@ See following projects.
 
 * https://github.com/miya0001/simple-map
 * https://github.com/miya0001/oembed-gist
+* https://github.com/miya0001/content-template-engine
+
