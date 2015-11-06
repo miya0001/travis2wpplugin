@@ -28,13 +28,13 @@ rm -fr $SVN_ROOT_DIR/git
 
 cd $SVN_ROOT_DIR/trunk
 
-if [ -e ".svnignore" ]; then
-	svn propset -q -R svn:ignore -F .svnignore .
-fi
-
 if [ -e "bin/build.sh" ]; then
 	echo "Startng bin/build.sh."
 	bash bin/build.sh
+fi
+
+if [ -e ".svnignore" ]; then
+	svn propset -q -R svn:ignore -F .svnignore .
 fi
 
 cd $SVN_ROOT_DIR
