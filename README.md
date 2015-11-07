@@ -49,9 +49,9 @@ https://github.com/miya0001/simple-map
 
 This script runs `svn propset -R` automatically  when there is a `.svnignore`.
 
-### Running a building
+### `bin/build.sh`
 
-Please place the `bin/build.sh`.
+If you are using `gulp`, `composer` or so, please place the `bin/build.sh`.
 
 `bin/build.sh` will be executed automatically.
 
