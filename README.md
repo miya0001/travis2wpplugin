@@ -76,3 +76,4 @@ Please check logs of Travis CI.
 * https://github.com/miya0001/oembed-gist
 * https://github.com/miya0001/content-template-engine
 * https://github.com/miya0001/wp-total-hacks
+* https://github.com/torounit/hello-kushimoto/
