@@ -57,19 +57,20 @@ If you are using `gulp`, `composer` or so, please place the `bin/build.sh`.
 
 ## How to commit
 
-```
-$ git commit -m "Some fix"
-$ git push
-```
-
-When you would push tag, then it will run commit,
+When you would push tag like following, then it will run commit,
 
 ```
 $ git tag 1.0.0
 $ git push origin 1.0.0
 ```
 
-See following projects.
+Tag and plugin's version need to be same.
+
+## Example project
+
+We are using this project in following plugins.
+
+Please check logs of Travis CI.
 
 * https://github.com/miya0001/simple-map
 * https://github.com/miya0001/oembed-gist
