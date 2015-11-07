@@ -1,4 +1,4 @@
-# Automated deploy to WordPress plugin repository from Travis CI
+# Automated deploy to plugin repository on wordpress.org from Travis CI
 
 ## How to setup
 
@@ -57,7 +57,7 @@ If you are using `gulp`, `composer` or so, please place the `bin/build.sh`.
 
 ## How to commit
 
-When you would push tag like following, then it will run commit,
+When you would push tag like following, then it will run commit to plugin's repository on wordpress.org.
 
 ```
 $ git tag 1.0.0
