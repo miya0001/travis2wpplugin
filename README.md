@@ -74,4 +74,4 @@ See following projects.
 * https://github.com/miya0001/simple-map
 * https://github.com/miya0001/oembed-gist
 * https://github.com/miya0001/content-template-engine
-
+* https://github.com/miya0001/wp-total-hacks
