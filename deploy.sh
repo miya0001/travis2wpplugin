@@ -22,7 +22,7 @@ BASE_DIR=$(pwd)
 echo "Checking out from $SVN_REPO ..."
 svn co -q $SVN_REPO
 
-echo "Getting clone from $SVN_REPO ..."
+echo "Getting clone from $GH_REF to $SVN_REPO ..."
 git clone -q $GH_REF $(basename $SVN_REPO)/git
 
 cd $(basename $SVN_REPO)/git
