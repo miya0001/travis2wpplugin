@@ -19,7 +19,10 @@ mkdir build
 cd build
 BASE_DIR=$(pwd)
 
+echo "Checking out from $SVN_REPO ..."
 svn co -q $SVN_REPO
+
+echo "Getting clone from $SVN_REPO ..."
 git clone -q $GH_REF $(basename $SVN_REPO)/git
 
 cd $(basename $SVN_REPO)/git
@@ -32,18 +35,22 @@ fi
 cd $BASE_DIR/$(basename $SVN_REPO)
 SVN_ROOT_DIR=$(pwd)
 
+echo "Syncing git repository to svn"
 rsync -av --exclude=".svn" --checksum --delete $SVN_ROOT_DIR/git/ $SVN_ROOT_DIR/trunk/
 rm -fr $SVN_ROOT_DIR/git
 
 cd $SVN_ROOT_DIR/trunk
 
 if [ -e ".svnignore" ]; then
+	echo "svn propset"
 	svn propset -q -R svn:ignore -F .svnignore .
 fi
 
 cd $SVN_ROOT_DIR
 
+echo "Run svn add"
 svn st | grep '^!' | sed -e 's/\![ ]*/svn del -q /g' | sh
+echo "Run svn del"
 svn st | grep '^?' | sed -e 's/\?[ ]*/svn add -q /g' | sh
 
 if [[ $TRAVIS_TAG && $SVN_USER && $SVN_PASS ]]; then
