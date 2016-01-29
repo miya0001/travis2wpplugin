@@ -12,6 +12,8 @@ if [[ ! $WP_PULUGIN_DEPLOY ]]; then
 	exit
 fi
 
+GH_REF=https://github.com/${TRAVIS_REPO_SLUG}.git
+
 echo "Starting deploy..."
 
 mkdir build
