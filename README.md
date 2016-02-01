@@ -25,7 +25,6 @@ Finally, please add environments variables like following in global section.
 env:
   global:
     - SVN_REPO: https://plugins.svn.wordpress.org/<plugin-slug>/
-    - GH_REF: https://github.com/<your-github-account>/<your-github-repository>.git
     - secure: "xxxxxxxx"
 ```
 
