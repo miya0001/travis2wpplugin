@@ -43,9 +43,15 @@ rm -fr $SVN_ROOT_DIR/git
 
 cd $SVN_ROOT_DIR/trunk
 
-if [ -e ".svnignore" ]; then
-	echo "svn propset"
-	svn propset -q -R svn:ignore -F .svnignore .
+if [ -e ".distignore" ]; then
+	echo "svn propset form .distignore"
+	svn propset -q -R svn:ignore -F .distignore .
+
+else
+	if [ -e ".svnignore" ]; then
+		echo "svn propset"
+		svn propset -q -R svn:ignore -F .svnignore .
+	fi
 fi
 
 cd $SVN_ROOT_DIR
