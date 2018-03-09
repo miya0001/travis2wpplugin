@@ -69,11 +69,11 @@ Tag and plugin's version need to be same.
 
 You can use following checklist to integrate this project in your plugin.
 
-1. [ ]  Add `after_success: curl -L https://raw.githubusercontent.com/miya0001/travis2wpplugin/master/deploy.sh | bash` into `.travis.yml` like [this](https://github.com/tarosky/logbook/blob/master/.travis.yml#L57).
-2. [ ] Define the `WP_PULUGIN_DEPLOY=1` in the `.travis.yml` like [this](https://github.com/tarosky/logbook/blob/master/.travis.yml#L14).
-3. Run `travis encrypt SVN_USER=<your-account> SVN_PASS=<your-password>` and paste the output into `.travis.yml` like [this](https://github.com/tarosky/logbook/blob/master/.travis.yml#L43-L46).
-5. [ ] Place the `.distignore` that are list of files to exclude to commit SVN. It is an [example](https://github.com/tarosky/logbook/blob/master/.distignore).
-4. [ ] If you need to run `npm install` or `composer install` or so, place the `build.sh` that will be executed automatically. This is an [example](https://github.com/tarosky/logbook/blob/master/bin/build.sh).
+* [ ]  Add `after_success: curl -L https://raw.githubusercontent.com/miya0001/travis2wpplugin/master/deploy.sh | bash` into `.travis.yml` like [this](https://github.com/tarosky/logbook/blob/master/.travis.yml#L57).
+* [ ] Define the `WP_PULUGIN_DEPLOY=1` in the `.travis.yml` like [this](https://github.com/tarosky/logbook/blob/master/.travis.yml#L14).
+* [ ] Run `travis encrypt SVN_USER=<your-account> SVN_PASS=<your-password>` and paste the output into `.travis.yml` like [this](https://github.com/tarosky/logbook/blob/master/.travis.yml#L43-L46).
+* [ ] Place the `.distignore` that are list of files to exclude to commit SVN. It is an [example](https://github.com/tarosky/logbook/blob/master/.distignore).
+* [ ] If you need to run `npm install` or `composer install` or so, place the `build.sh` that will be executed automatically. This is an [example](https://github.com/tarosky/logbook/blob/master/bin/build.sh).
 
 Finnaly, you can release your plugin like following.
 
