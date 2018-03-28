@@ -38,7 +38,7 @@ cd $BASE_DIR/$(basename $SVN_REPO)
 SVN_ROOT_DIR=$(pwd)
 
 echo "Syncing git repository to svn"
-rsync -av --exclude=".svn" --checksum --delete $SVN_ROOT_DIR/git/ $SVN_ROOT_DIR/trunk/
+rsync -a --exclude=".svn" --checksum --delete $SVN_ROOT_DIR/git/ $SVN_ROOT_DIR/trunk/
 rm -fr $SVN_ROOT_DIR/git
 
 cd $SVN_ROOT_DIR/trunk
