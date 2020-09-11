@@ -61,9 +61,11 @@ else
 	fi
 fi
 
-echo "Run svn add"
+echo "Run svn del for modified and missing directories."
+svn st | grep '^!M' | sed -e 's/\!M[ ]*/svn del -q /g' | sh
+echo "Run svn del for missing files and directories."
 svn st | grep '^!' | sed -e 's/\![ ]*/svn del -q /g' | sh
-echo "Run svn del"
+echo "Run svn add"
 svn st | grep '^?' | sed -e 's/\?[ ]*/svn add -q /g' | sh
 
 # If tag number and credentials are provided, commit to trunk.
