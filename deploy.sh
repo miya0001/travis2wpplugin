@@ -61,7 +61,9 @@ else
 	fi
 fi
 
-echo "Run svn del"
+echo "Run svn del for modified and missing directories."
+svn st | grep '^!M' | sed -e 's/\!M[ ]*/svn del -q /g' | sh
+echo "Run svn del for missing files and directories."
 svn st | grep '^!' | sed -e 's/\![ ]*/svn del -q /g' | sh
 echo "Run svn add"
 svn st | grep '^?' | sed -e 's/\?[ ]*/svn add -q /g' | sh
